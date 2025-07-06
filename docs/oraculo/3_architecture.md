@@ -34,17 +34,19 @@ The Oráculo project is organized into well-defined modules with specific respon
 
 ## Overview of the Data Flow
 
-User (OpenWebUI interface)  
-        ↓  
-  `pipeline_api.py`  
-        ↓  
- FastAPI (backend/API)  
-        ↓  
-    Vanna.AI (LLM)  
-        ↓  
- SQL → PostgreSQL Database  
-        ↓  
- ↪ Response shown to the user
+<div style={{ textAlign: 'center', lineHeight: '2' }}>
+  User asks a question (OpenWebUI interface) <br />
+  ↓ <br />
+  Request is sent to the Webhook <br />
+  ↓ <br />
+  FastAPI handles the request <br />
+  ↓ <br />
+  Vanna.AI analyzes the question <br />
+  ↓ <br />
+  SQL query is generated <br />
+  ↓ <br />
+  ↪ Response shown to the user
+</div>
 
 ## Architecture Summary by Role
 
